@@ -10,20 +10,12 @@ const getDetails = (req, res) => {
     });
     
     register.save()
-        .then(() => {
+        .then((saveObjet) => {
             // Redirect with data as URL parameters
-                const data = {
-                  name: 'John Doe',
-                  age: 25,
-                  city: 'New York'
-                };
+
                 res.json(data);
 
         })
-        .catch((err) => {
-            console.log(err);
-            res.status(500).send('Error saving data');
-        });
 };
 
 module.exports = getDetails;
