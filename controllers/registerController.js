@@ -10,10 +10,10 @@ const getDetails = (req, res) => {
     });
     
     register.save()
-        .then((saveObjet) => {
+        .then((saveObject) => {
             // Redirect with data as URL parameters
 
-                res.json(data);
+                res.json(saveObject);
 
         })
 };

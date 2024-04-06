@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const route = require('./route/route');
-const connectToMongoDB = require('./index');
+const connectToMongoDB = require('./mongoose');
 
 app.use((req, res, next)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");
